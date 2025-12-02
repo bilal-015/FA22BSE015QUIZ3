@@ -4,7 +4,7 @@ pipeline {
         stage('Run Python Program') {
             steps {
                 echo "Running Python Program..."
-                bat 'python hello.py'
+                bat 'py hello.py'
             }
         }
     }
