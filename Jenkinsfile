@@ -1,22 +1,16 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Run Python Program') {
             steps {
-                echo "Compiling Java Program..."
-                sh 'javac HelloWorld.java'
-            }
-        }
-        stage('Run') {
-            steps {
-                echo "Running Java Program..."
-                sh 'java HelloWorld'
+                echo "Running Python Program..."
+                sh 'python3 hello.py'
             }
         }
     }
     post {
         always {
-            echo "Java Pipeline Completed."
+            echo "Python Pipeline Completed."
         }
     }
 }
